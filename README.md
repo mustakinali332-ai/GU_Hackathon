@@ -40,7 +40,12 @@ North East India is an unexplored paradise blessed with rich biodiversity, uniqu
 - Verified local tourist guides for each state with transparent pricing, spoken languages, and specialties (wildlife safaris, living root bridge treks, monastery tours).
 - **One-click WhatsApp booking** directly connecting tourists to local guides, empowering the regional grassroots economy.
 
-### 5. 💰 Dynamic Budget Estimator
+### 5. 🛂 Northeast Permit & ILP Navigator (Official 2026 Guidelines)
+- **Interactive Permit Status:** Instant check on whether **Inner Line Permit (ILP)** or **Protected Area Permit (PAP)** is required for all 8 states (Arunachal, Nagaland, Mizoram, Manipur, Sikkim, Assam, Meghalaya, Tripura).
+- **Checklists & Direct Portals:** Complete document requirements, validity periods, government fees, and 1-click links to official state e-ILP portals (`arunachalilp.com`, `ilp.nagaland.gov.in`, etc.).
+- **Crucial Border Tips:** Explains critical nuances (e.g. why Aadhaar is strictly rejected at Nathula Pass in favor of Voter ID/Passport).
+
+### 6. 💰 Dynamic Budget Estimator
 - Interactive calculator that models transportation, dining, stay tiers (Homestays, Hotels, Resorts), and activities.
 - Practical money-saving tips for navigating Northeast India smoothly and affordably.
 

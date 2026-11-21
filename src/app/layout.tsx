@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingHelp from "@/components/FloatingHelp";
 
 export const metadata: Metadata = {
   title: "TravelMateNE — Discover Northeast India",
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-gray-50 antialiased">
         <Navbar />
         <main className="pt-16">{children}</main>
+        <FloatingHelp />
         <Footer />
       </body>
     </html>

@@ -22,6 +22,7 @@ export default function Footer() {
               <li><Link href="/attractions" className="hover:text-emerald-400 transition-colors">Attractions</Link></li>
               <li><Link href="/plan-trip" className="hover:text-emerald-400 transition-colors">AI Trip Planner</Link></li>
               <li><Link href="/guides" className="hover:text-emerald-400 transition-colors">Local Guides</Link></li>
+              <li><Link href="/permits" className="hover:text-emerald-400 transition-colors">Permits &amp; ILP Guide</Link></li>
             </ul>
           </div>
           <div>

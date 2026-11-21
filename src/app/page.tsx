@@ -46,6 +46,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Permits & ILP Callout Section */}
+      <section className="bg-emerald-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-2xl">
+              <span className="inline-block px-3.5 py-1 bg-emerald-800 text-emerald-300 rounded-full text-xs font-semibold uppercase tracking-wider mb-3">
+                🛂 Hassle-Free Travel Intelligence
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-3">
+                Confused about Northeast Entry Permits (ILP)?
+              </h2>
+              <p className="text-emerald-100 text-base leading-relaxed">
+                4 states require Inner Line Permits (ILP) and Sikkim requires border passes. Access our interactive permit checklist, document requirements, and official state government portals in one place.
+              </p>
+            </div>
+            <Link
+              href="/permits"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-emerald-900 font-bold rounded-xl hover:bg-emerald-50 transition-all shrink-0 shadow-lg"
+            >
+              Check Permits &amp; Rules <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* AI CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">

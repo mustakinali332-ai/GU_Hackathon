@@ -10,6 +10,7 @@ const links = [
   { href: "/plan-trip", label: "AI Trip Planner" },
   { href: "/guides", label: "Local Guides" },
   { href: "/budget", label: "Budget Estimator" },
+  { href: "/permits", label: "Permits & ILP" },
 ];
 
 export default function Navbar() {
