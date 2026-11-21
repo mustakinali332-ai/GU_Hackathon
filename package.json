@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@tailwindcss/postcss": "^4.3.5",
+    "autoprefixer": "^10.7.0",
     "framer-motion": "^14.14.0",
     "lucide-react": "^1.77.0",
     "next": "16.4.6",
+    "postcss": "^8.5.33",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "tailwindcss": "4.3.3"
+    "tailwindcss": "^3.4.19"
   },
   "devDependencies": {
-    "@tailwindcss/turbopack": "4.3.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

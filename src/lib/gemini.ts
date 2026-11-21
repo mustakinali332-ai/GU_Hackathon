@@ -10,6 +10,9 @@ export async function generateTripPlan(params: {
   travelStyle: string;
 }) {
   try {
+    if (!API_KEY) {
+      return generateCuratedFallback(params);
+    }
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
