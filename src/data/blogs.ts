@@ -70,7 +70,7 @@ export const blogs: BlogPost[] = [
     slug: "14-assamese-dishes-and-food-you-must-try",
     title: "14 Assamese Dishes and Traditional Food That You Must Try",
     excerpt: "If you think Northeast food is only about momos, discover the magic of alkaline Khar, sour Masor Tenga, and duck cooked with black sesame and ash gourd.",
-    coverImage: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&q=80",
+    coverImage: "/images/cuisines/assam.jpg",
     author: {
       name: "Dr. Ananya Baruah",
       role: "Assamese Culinary Anthropologist",
