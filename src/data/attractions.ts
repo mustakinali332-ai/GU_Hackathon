@@ -19,7 +19,7 @@ export const attractions: Attraction[] = [
     stateId: "assam",
     type: "wildlife",
     description: "UNESCO World Heritage Site housing two-thirds of the world's great one-horned rhinoceros population. Vast elephant grass meadows along the Brahmaputra support wild elephants, water buffalo, and Bengal tigers.",
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=700&q=80", // One-horned rhino in tall grasslands
     rating: 4.9,
     bestTime: "Nov - Apr",
     entryFee: "₹100 (Indian) / ₹650 (Foreign)",
@@ -31,7 +31,7 @@ export const attractions: Attraction[] = [
     stateId: "assam",
     type: "nature",
     description: "The world's largest freshwater river island, cradled by the Brahmaputra. The epicenter of Neo-Vaishnavite culture with historic Satras (monasteries), traditional bamboo mask-making, and golden river sunsets.",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700&q=80", // Serene river island sunset on Brahmaputra
     rating: 4.7,
     bestTime: "Oct - Mar",
     entryFee: "Free",
@@ -43,7 +43,7 @@ export const attractions: Attraction[] = [
     stateId: "assam",
     type: "temple",
     description: "One of India's oldest and most revered Shakti Peethas perched on Nilachal Hill in Guwahati. Revered for its unique beehive-shaped shikhara architecture, tantric heritage, and scenic Brahmaputra views.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=700&q=80", // Ancient stone shikhara temple atop hill
     rating: 4.8,
     bestTime: "Year-round",
     entryFee: "Free (Special Darshan ₹501)",
@@ -55,7 +55,7 @@ export const attractions: Attraction[] = [
     stateId: "assam",
     type: "wildlife",
     description: "UNESCO Natural World Heritage Site and Biosphere Reserve in the foothills of the Himalayas. Renowned for rare golden langurs, pygmy hogs, wild water buffaloes, and river rafting excursions.",
-    image: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=700&q=80", // Elephant safari & Himalayan foothills forest
     rating: 4.6,
     bestTime: "Nov - Apr",
     entryFee: "₹50 (Indian) / ₹500 (Foreign)",
@@ -67,7 +67,7 @@ export const attractions: Attraction[] = [
     stateId: "assam",
     type: "heritage",
     description: "The historic capital of the 600-year Ahom Dynasty. Home to Rang Ghar (Asia's oldest royal amphitheatre), Talatal Ghar (multi-storied subterranean palace fortress), and colossal Shiva Dol temple.",
-    image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=700&q=80", // Historic red-brick royal monument
     rating: 4.5,
     bestTime: "Oct - Mar",
     entryFee: "₹25 (Indian) / ₹300 (Foreign)",
@@ -81,7 +81,7 @@ export const attractions: Attraction[] = [
     stateId: "meghalaya",
     type: "nature",
     description: "Living bio-engineering marvel grown over generations by Khasi tribes using the aerial roots of Ficus elastica trees. The 3,500-step trek leads to turquoise natural swimming pools and dual stacked root bridges.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=80",
+    image: "/images/states/meghalaya.jpg", // Authentic Nongriat Double Decker Living Root Bridge
     rating: 4.9,
     bestTime: "Oct - May",
     entryFee: "₹50 (Trek fee)",
@@ -93,7 +93,7 @@ export const attractions: Attraction[] = [
     stateId: "meghalaya",
     type: "lake",
     description: "Famed for emerald crystal-clear waters where traditional country boats appear to float mid-air over visible river pebbles. Sits on the international border with Bangladesh in Jaintia Hills.",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80", // Clear emerald river canyon
     rating: 4.8,
     bestTime: "Nov - Apr (Clearest water)",
     entryFee: "Boat hire ₹800 - ₹1,200",
@@ -105,7 +105,7 @@ export const attractions: Attraction[] = [
     stateId: "meghalaya",
     type: "waterfall",
     description: "Dramatic cloud-draped cliffs that drop 340 meters into turquoise canyon pools at Nohkalikai—India's tallest plunge waterfall. Explore ancient limestone caves like Mawsmai and Arwah.",
-    image: "https://images.unsplash.com/photo-1432405972618-c6b0cfba8b03?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1432405972618-c6b0cfba8b03?w=700&q=80", // Spectacular plunge waterfall canyon
     rating: 4.8,
     bestTime: "Sep - May",
     entryFee: "₹30",
@@ -117,7 +117,7 @@ export const attractions: Attraction[] = [
     stateId: "meghalaya",
     type: "heritage",
     description: "Acclaimed as the 'Cleanest Village in Asia'. A model community-run Khasi village with bamboo dustbins at every corner, floral lanes, treehouse sky-walks, and single-tier living root bridges.",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=700&q=80", // Floral clean stone pathways
     rating: 4.6,
     bestTime: "Oct - May",
     entryFee: "₹50 per vehicle",
@@ -129,7 +129,7 @@ export const attractions: Attraction[] = [
     stateId: "meghalaya",
     type: "waterfall",
     description: "A scenic three-tiered waterfall nestled within fern forests on the outskirts of Shillong. Nearby Shillong Peak offers panoramic bird's-eye vistas across the 'Scotland of the East'.",
-    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=700&q=80", // Three-tiered forest waterfall
     rating: 4.5,
     bestTime: "Sep - May",
     entryFee: "₹20",
@@ -143,7 +143,7 @@ export const attractions: Attraction[] = [
     stateId: "nagaland",
     type: "festival",
     description: "The internationally celebrated 'Festival of Festivals' uniting all 16 Naga tribes every December. Experience thunderous ceremonial log-drums, traditional morung huts, warrior dances, and spicy smoked pork culinary delights.",
-    image: "https://images.unsplash.com/photo-1533669955142-6a73332af4db?w=700&q=80",
+    image: "/images/states/nagaland.jpg", // Authentic Naga warriors in ceremonial Hornbill regalia
     rating: 4.9,
     bestTime: "December 1 - 10",
     entryFee: "₹20 (Indian) / ₹100 (Foreign)",
@@ -155,7 +155,7 @@ export const attractions: Attraction[] = [
     stateId: "nagaland",
     type: "adventure",
     description: "Sitting at 2,452m on the Nagaland-Manipur border, Dzükou is famous for its rolling velvet-green dwarf bamboo hills, crystal winding streams, and the rare seasonal Dzükou Lily.",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80", // Rolling green alpine ridges
     rating: 4.9,
     bestTime: "Jun - Sep (Flowers), Oct - Mar (Clear skies)",
     entryFee: "₹100 (Entry fee) + Camping charge",
@@ -167,7 +167,7 @@ export const attractions: Attraction[] = [
     stateId: "nagaland",
     type: "heritage",
     description: "Commemorating the pivotal WWII Battle of Kohima (1944) where Allied forces halted the Japanese invasion of India. Famous for the immortal epitaph: 'When you go home, tell them of us and say, for your tomorrow, we gave our today.'",
-    image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=700&q=80", // Historic memorial lawn
     rating: 4.7,
     bestTime: "Oct - May",
     entryFee: "Free",
@@ -181,7 +181,7 @@ export const attractions: Attraction[] = [
     stateId: "manipur",
     type: "lake",
     description: "The largest freshwater lake in Northeast India, famous for 'phumdis'—naturally floating biomass rings. Hosts Keibul Lamjao, the world's only floating national park and sanctuary of the endangered brow-antlered Sangai deer.",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700&q=80",
+    image: "/images/states/manipur.jpg", // Authentic Loktak Lake fisherman on floating phumdis
     rating: 4.8,
     bestTime: "Oct - Mar",
     entryFee: "₹20 (Boat rides ₹300 - ₹600)",
@@ -193,7 +193,7 @@ export const attractions: Attraction[] = [
     stateId: "manipur",
     type: "heritage",
     description: "The historic administrative and spiritual seat of Manipuri kings for over 2,000 years. Enclosed by dual moats, featuring the revered Kangla Sha dragon sculptures, sacred Govindaji shrine, and ancient coronation mounds.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=80", // Royal palace fortress on water
     rating: 4.6,
     bestTime: "Oct - Mar",
     entryFee: "₹10",
@@ -205,7 +205,7 @@ export const attractions: Attraction[] = [
     stateId: "manipur",
     type: "heritage",
     description: "A 500-year-old historic market in central Imphal operated exclusively by over 5,000 married women (Imas). A symbol of female empowerment selling hand-woven Phaneks, fresh spices, and brass utensils.",
-    image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=700&q=80", // Traditional market goods & thalis
     rating: 4.7,
     bestTime: "Year-round",
     entryFee: "Free",
@@ -219,7 +219,7 @@ export const attractions: Attraction[] = [
     stateId: "mizoram",
     type: "adventure",
     description: "The highest mountain peak in Mizoram (2,157m) wrapped in perpetual blue atmospheric haze. Sacred to local Mizo lore, surrounded by vibrant rhododendron thickets, rare orchids, and dramatic mountain cliffs.",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700&q=80", // Blue mountain peaks in clouds
     rating: 4.6,
     bestTime: "Oct - Mar",
     entryFee: "₹50 (Forest permit)",
@@ -231,7 +231,7 @@ export const attractions: Attraction[] = [
     stateId: "mizoram",
     type: "waterfall",
     description: "The highest uninterrupted waterfall in Mizoram cascading 750 feet through dense green bamboo canopies. Located near Thenzawl, known as the handloom weaving capital of Mizoram.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=700&q=80", // Deep forest waterfall
     rating: 4.5,
     bestTime: "Jul - Oct (Peak flow) / Nov - Feb",
     entryFee: "₹20",
@@ -245,7 +245,7 @@ export const attractions: Attraction[] = [
     stateId: "tripura",
     type: "heritage",
     description: "The 'Lake Palace of the East', built in 1930 by King Bir Bikram Kishore Manikya in the middle of Rudrasagar Lake. Blends ornate Mughal and Hindu palace architecture, reached by motorboat across calm waters.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=80", // Historic Indian palace on lake
     rating: 4.7,
     bestTime: "Sep - Feb",
     entryFee: "₹20 (Boat ride ₹50)",
@@ -257,7 +257,7 @@ export const attractions: Attraction[] = [
     stateId: "tripura",
     type: "heritage",
     description: "Mysterious ancient rock-cut pilgrimage sanctuary dating to the 7th-9th century. Legend claims there are 99,99,999 stone carvings depicting Lord Shiva (Unakotiswara Kal Bhairava) with roaring hillside waterfalls.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=700&q=80",
+    image: "/images/states/tripura.jpg", // Authentic Unakoti rock carvings
     rating: 4.6,
     bestTime: "Oct - Mar",
     entryFee: "₹20",
@@ -271,7 +271,7 @@ export const attractions: Attraction[] = [
     stateId: "arunachal-pradesh",
     type: "temple",
     description: "The largest Buddhist monastery in India and second-largest in the world, founded in 1680 at 10,000 ft. Houses priceless gold-inked manuscripts, a 28-foot gilded Buddha statue, and panoramic Himalayan valley vistas.",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80",
+    image: "/images/states/arunachal-pradesh.jpg", // Authentic Tawang Monastery on the mountain ridge
     rating: 4.9,
     bestTime: "Mar - Oct",
     entryFee: "₹50",
@@ -283,7 +283,7 @@ export const attractions: Attraction[] = [
     stateId: "arunachal-pradesh",
     type: "adventure",
     description: "A breathless high-altitude mountain pass at 13,700 ft connecting Bomdila to Tawang. Surrounded by frozen turquoise glacial lakes, billowing Buddhist prayer flags, and dramatic snow-capped Himalayan peaks.",
-    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80", // Snow pass with prayer flags
     rating: 4.8,
     bestTime: "Apr - Jun, Sep - Nov",
     entryFee: "Free (Inner Line Permit required)",
@@ -295,7 +295,7 @@ export const attractions: Attraction[] = [
     stateId: "arunachal-pradesh",
     type: "nature",
     description: "A serene highland valley surrounded by pine-clad hills and lush paddy-cum-pisciculture fields. Home to the indigenous Apatani tribe celebrated for sustainable forestry, unique facial tattoos, and the annual outdoor Ziro Music Festival.",
-    image: "https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=700&q=80", // Pine groves and green terrace valley
     rating: 4.8,
     bestTime: "Mar - Oct (Music Fest in Sep/Oct)",
     entryFee: "Free",
@@ -309,7 +309,7 @@ export const attractions: Attraction[] = [
     stateId: "sikkim",
     type: "lake",
     description: "One of the highest alpine lakes in the world at 17,800 ft, sacred to Buddhists, Sikhs, and Hindus. Encircled by glaciers and Tibetan plateaus, a portion of the crystal blue water never freezes even in sub-zero winter.",
-    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=700&q=80",
+    image: "/images/states/sikkim.jpg", // Authentic Sikkim Himalayan lake with decorated Yak
     rating: 4.9,
     bestTime: "Apr - Jun, Oct - Dec",
     entryFee: "Army border permit required (Voter ID/Passport only)",
@@ -321,7 +321,7 @@ export const attractions: Attraction[] = [
     stateId: "sikkim",
     type: "adventure",
     description: "Historic mountain pass at 14,140 ft on the Indo-China frontier along the ancient Old Silk Route. Visit the international border gate, Baba Harbhajan Singh Memorial, and snow-draped ridge lines.",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=700&q=80", // Himalayan snow peaks & pass
     rating: 4.8,
     bestTime: "May - Oct",
     entryFee: "₹200 (Vehicle Permit fee)",
@@ -333,7 +333,7 @@ export const attractions: Attraction[] = [
     stateId: "sikkim",
     type: "lake",
     description: "A dramatic glacial lake at 12,313 ft whose waters reflect changing hues with the seasons. Offers scenic yak rides, alpine ropeway cable car journeys, and frozen winter panoramas.",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=700&q=80",
+    image: "/images/states/sikkim.jpg", // Authentic Sikkim Yak & glacial lake
     rating: 4.7,
     bestTime: "Mar - May, Oct - Dec",
     entryFee: "Permit included in vehicle pass",
@@ -345,7 +345,7 @@ export const attractions: Attraction[] = [
     stateId: "sikkim",
     type: "temple",
     description: "The grandest monastery in Sikkim and primary seat-in-exile of the Gyalwang Karmapa (Kagyu lineage). Houses priceless golden stupas, intricate wall thangkas, and a renowned monastic university.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=700&q=80",
+    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=700&q=80", // Monastic temple architecture
     rating: 4.6,
     bestTime: "Year-round",
     entryFee: "₹10",
