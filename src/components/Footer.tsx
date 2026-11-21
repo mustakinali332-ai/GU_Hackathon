@@ -20,9 +20,11 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/explore" className="hover:text-emerald-400 transition-colors">All States</Link></li>
               <li><Link href="/attractions" className="hover:text-emerald-400 transition-colors">Attractions</Link></li>
+              <li><Link href="/safari" className="hover:text-emerald-400 transition-colors">Safaris &amp; Gypsy Booking</Link></li>
               <li><Link href="/plan-trip" className="hover:text-emerald-400 transition-colors">AI Trip Planner</Link></li>
               <li><Link href="/guides" className="hover:text-emerald-400 transition-colors">Local Guides</Link></li>
               <li><Link href="/permits" className="hover:text-emerald-400 transition-colors">Permits &amp; ILP Guide</Link></li>
+              <li><Link href="/blogs" className="hover:text-emerald-400 transition-colors">Travel Blogs</Link></li>
             </ul>
           </div>
           <div>

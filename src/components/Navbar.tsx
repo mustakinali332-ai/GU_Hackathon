@@ -5,12 +5,14 @@ import { Menu, X, Compass } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/explore", label: "Explore States" },
+  { href: "/explore", label: "States" },
   { href: "/attractions", label: "Attractions" },
-  { href: "/plan-trip", label: "AI Trip Planner" },
-  { href: "/guides", label: "Local Guides" },
-  { href: "/budget", label: "Budget Estimator" },
+  { href: "/safari", label: "Safaris & Gypsy" },
+  { href: "/plan-trip", label: "AI Planner" },
+  { href: "/guides", label: "Guides" },
+  { href: "/budget", label: "Budget" },
   { href: "/permits", label: "Permits & ILP" },
+  { href: "/blogs", label: "Blogs" },
 ];
 
 export default function Navbar() {

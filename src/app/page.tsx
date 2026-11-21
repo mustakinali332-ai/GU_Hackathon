@@ -3,6 +3,7 @@ import StateCard from "@/components/StateCard";
 import { states } from "@/data/states";
 import { attractions } from "@/data/attractions";
 import AttractionCard from "@/components/AttractionCard";
+import ReviewsSection from "@/components/ReviewsSection";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
@@ -70,6 +71,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Customer Reviews Section */}
+      <ReviewsSection />
 
       {/* AI CTA Section */}
       <section className="py-20">
