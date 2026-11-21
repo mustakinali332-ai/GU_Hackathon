@@ -45,7 +45,7 @@ export const safariPackages: SafariPackage[] = [
     description: "Located just 48 km from Guwahati, Pobitora holds the HIGHEST DENSITY of Great Indian One-Horned Rhinoceroses on Earth. An early morning elephant ride brings you within touching distance of rhinos grazing peacefully in dew-soaked marshes with a near 100% sighting guarantee.",
     wildlifeHighlights: ["One-Horned Rhinoceros (Highest Density)", "Wild Asiatic Buffalo", "Hog Deer", "Migratory Birds"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "/images/safaris/pobitora-elephant.jpg", // Authentic dawn elephant safari in Pobitora with rhinos
     distanceFromGuwahati: "48 km (~1.5 hrs drive)",
     inclusions: [
       "Authorized Elephant ride and Mahout fee",
@@ -82,7 +82,7 @@ export const safariPackages: SafariPackage[] = [
     description: "An open 4x4 Gypsy trail traversing the floodplains and swamps of Pobitora. Quick and accessible from Guwahati, ideal for photography of grazing rhinos, basking turtles, and rare winter migratory waterfowl.",
     wildlifeHighlights: ["Rhino Mothers & Calves", "Grey-headed Fish Eagle", "Asian Water Buffalo", "Otters"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+    image: "/images/safaris/pobitora-gypsy.jpg", // Authentic 4x4 open safari gypsies at Pobitora gate
     distanceFromGuwahati: "48 km (~1.5 hrs drive)",
     inclusions: [
       "Exclusive 4x4 Gypsy vehicle hire with experienced wildlife driver",
@@ -121,7 +121,7 @@ export const safariPackages: SafariPackage[] = [
     description: "The most legendary elephant safari in Asia. Ride atop gentle giants through morning mist into dense 10-foot-tall elephant grass where wild rhinos, calves, and buffaloes graze undisturbed by engine noise.",
     wildlifeHighlights: ["Close-Up One-Horned Rhinos", "Swamp Deer (Barasingha)", "Wild Buffaloes", "Elephant Herd"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=800&q=80",
+    image: "/images/safaris/kaziranga-elephant.jpg", // Authentic dawn elephant safari in Kaziranga National Park
     distanceFromGuwahati: "215 km (~4.5 hrs drive)",
     inclusions: [
       "Authorized Department Elephant Seat & Mahout services",
@@ -158,7 +158,7 @@ export const safariPackages: SafariPackage[] = [
     description: "The premier western wildlife circuit of Kaziranga with open wetland vistas along Donga Beel. The highest concentration of rhinos and swamp deer in the entire national park.",
     wildlifeHighlights: ["One-Horned Rhinoceros", "Wild Water Buffalo", "Hog Deer", "River Otters"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "/images/safaris/kaziranga-gypsy.jpg", // Authentic 4x4 open safari Gypsy in Kaziranga National Park
     distanceFromGuwahati: "215 km (~4.5 hrs drive)",
     inclusions: [
       "Dedicated 4x4 open safari vehicle for up to 6 people",
@@ -194,7 +194,7 @@ export const safariPackages: SafariPackage[] = [
     description: "The heart of Kaziranga featuring diverse landscapes: open grasslands, water bodies, and deciduous forests. Exceptional for viewing pelicans, wild elephants, and rhinos at Mihimukh watchtower.",
     wildlifeHighlights: ["Pelicans at Kathpora", "Wild Elephants", "Barasingha", "Bengal Monitor"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80",
+    image: "/images/safaris/kaziranga-gypsy.jpg", // Authentic 4x4 open safari Gypsy in Kohora Central Zone
     distanceFromGuwahati: "220 km (~4.5 hrs drive)",
     inclusions: [
       "4x4 Gypsy vehicle hire with central range permit",
@@ -232,7 +232,7 @@ export const safariPackages: SafariPackage[] = [
     description: "Early morning elephant safari exploring the pristine foothills of Bhutan in the Himalayan terai grasslands. Search for elusive Golden Langurs, Asian elephants, and rhinos reintroduced under the Indian Rhino Vision 2020.",
     wildlifeHighlights: ["Golden Langur", "Reintroduced One-Horned Rhinos", "Asian Elephants", "Bengal Florican"],
     bestSeason: "October to May",
-    image: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=800&q=80",
+    image: "/images/safaris/manas-elephant.jpg", // Authentic elephant safari troop in Manas National Park
     distanceFromGuwahati: "140 km (~3.5 hrs drive)",
     inclusions: [
       "Authorized Forest Department Elephant ride seat",
@@ -268,7 +268,7 @@ export const safariPackages: SafariPackage[] = [
     description: "A spectacular 4x4 wilderness expedition from Bansbari all the way up to Mathanguri on the crystal-clear Manas River bordering Royal Manas National Park in Bhutan. Highest biodiversity in Assam.",
     wildlifeHighlights: ["Clouded Leopard", "Pygmy Hog", "Hispid Hare", "Wild Water Buffalo"],
     bestSeason: "October to May",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    image: "/images/safaris/manas-gypsy.jpg", // Authentic 4x4 safari wildlife sighting in Manas
     distanceFromGuwahati: "140 km (~3.5 hrs drive)",
     inclusions: [
       "Full deep-forest 4x4 Gypsy transit up to Mathanguri lodge",
@@ -306,7 +306,7 @@ export const safariPackages: SafariPackage[] = [
     description: "Affectionately called 'Mini Kaziranga', Orang lies on the northern bank of the Brahmaputra. Less crowded with high tiger density, breeding rhinos, pygmy hogs, and blind Gangetic river dolphins in adjacent streams.",
     wildlifeHighlights: ["Royal Bengal Tiger", "One-Horned Rhinos", "Pygmy Hog", "Gangetic River Dolphin"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "/images/safaris/orang-gypsy.jpg", // Authentic rhino landscape on northern reserve track
     distanceFromGuwahati: "115 km (~3 hrs drive)",
     inclusions: [
       "4x4 Gypsy hire for up to 6 persons",
@@ -344,7 +344,7 @@ export const safariPackages: SafariPackage[] = [
     description: "The only tiger reserve in Assam where walking safaris accompanied by armed forest guards are permitted! Experience a thrilling 13 km gentle raft float down the Jia Bhoroli River to spot the rare White-Winged Wood Duck and Ibisbill.",
     wildlifeHighlights: ["White-Winged Wood Duck (State Bird)", "Golden Mahseer Fish", "Wreathed Hornbill", "Asian Elephant"],
     bestSeason: "November to April",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    image: "/images/safaris/nameri-rafting.jpg", // Authentic river rafting boat on Jia Bhoroli river at Nameri
     distanceFromGuwahati: "215 km (~4.5 hrs drive)",
     inclusions: [
       "Inflatable river raft with experienced boatmen & life jackets",

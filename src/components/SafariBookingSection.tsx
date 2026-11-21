@@ -30,7 +30,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 1400,
     price: 1100,
     discountPercent: 15,
-    image: "https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?w=800&q=80",
+    image: "/images/safaris/manas-elephant.jpg",
   },
   {
     title: "Manas National Park Jeep Safari Booking",
@@ -43,7 +43,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 3500,
     price: 3000,
     discountPercent: 14,
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    image: "/images/safaris/manas-gypsy.jpg",
   },
   {
     title: "Kaziranga Jeep Safari Booking (Bagori Range)",
@@ -56,7 +56,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 3500,
     price: 2800,
     discountPercent: 20,
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "/images/safaris/kaziranga-gypsy.jpg",
   },
   {
     title: "Kaziranga National Park Elephant Safari Booking",
@@ -69,7 +69,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 1500,
     price: 1250,
     discountPercent: 16,
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+    image: "/images/safaris/kaziranga-elephant.jpg",
   },
   {
     title: "Pobitora Rhino Elephant Safari (48 km from Guwahati)",
@@ -82,7 +82,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 1300,
     price: 1000,
     discountPercent: 23,
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "/images/safaris/pobitora-elephant.jpg",
   },
   {
     title: "Orang National Park 4x4 Gypsy Safari (Mini Kaziranga)",
@@ -95,7 +95,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 2800,
     price: 2400,
     discountPercent: 14,
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "/images/safaris/orang-gypsy.jpg",
   },
   {
     title: "Nameri River Rafting & Armed Walking Forest Safari",
@@ -108,7 +108,7 @@ const featuredSafaris: SafariFeatureCard[] = [
     originalPrice: 3200,
     price: 2800,
     discountPercent: 12,
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    image: "/images/safaris/nameri-rafting.jpg",
   },
 ];
 
