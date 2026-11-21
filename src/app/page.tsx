@@ -3,8 +3,10 @@ import StateCard from "@/components/StateCard";
 import { states } from "@/data/states";
 import { attractions } from "@/data/attractions";
 import AttractionCard from "@/components/AttractionCard";
+import CultureSection from "@/components/CultureSection";
+import CuisineSection from "@/components/CuisineSection";
 import SafariBookingSection from "@/components/SafariBookingSection";
-import ReviewsSection from "@/components/ReviewsSection";
+import BlogHomeSection from "@/components/BlogHomeSection";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
@@ -48,8 +50,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Living Culture & Heritage Section (All 8 States) */}
+      <CultureSection />
+
+      {/* Indigenous Cuisines & Flavors Section (All 8 States) */}
+      <CuisineSection />
+
       {/* Featured Safari Booking Section (Elephant & Gypsy) */}
       <SafariBookingSection />
+
+      {/* Latest Travel & Culture Blogs Section */}
+      <BlogHomeSection />
 
       {/* Permits & ILP Callout Section */}
       <section className="bg-emerald-900 text-white py-16">
@@ -75,9 +86,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Customer Reviews Section */}
-      <ReviewsSection />
 
       {/* AI CTA Section */}
       <section className="py-20">

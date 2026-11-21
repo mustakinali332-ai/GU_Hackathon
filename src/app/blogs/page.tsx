@@ -7,7 +7,7 @@ export default function BlogsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [activeBlog, setActiveBlog] = useState<BlogPost | null>(null);
 
-  const categories = ["All", "Wildlife", "Trekking", "Culture", "Food"];
+  const categories = ["All", "Culture", "Food Tour", "Offbeat Travel", "Trekking", "Wildlife"];
 
   const filteredBlogs =
     selectedCategory === "All"

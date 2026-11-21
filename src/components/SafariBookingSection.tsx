@@ -1,14 +1,15 @@
 "use client";
 
+import { useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Compass, Heart } from "lucide-react";
+import { ArrowRight, Compass, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface SafariFeatureCard {
   title: string;
   slug: string;
   state: string;
   park: string;
-  type: "Elephant" | "Jeep";
+  type: "Elephant" | "Jeep" | "River/Walking";
   startTime: string;
   duration: string;
   originalPrice?: number;
@@ -70,15 +71,63 @@ const featuredSafaris: SafariFeatureCard[] = [
     discountPercent: 16,
     image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
   },
+  {
+    title: "Pobitora Rhino Elephant Safari (48 km from Guwahati)",
+    slug: "pobitora-wildlife-sanctuary-elephant-safari",
+    state: "ASSAM",
+    park: "Pobitora Wildlife Sanctuary",
+    type: "Elephant",
+    startTime: "06:30 AM",
+    duration: "1H",
+    originalPrice: 1300,
+    price: 1000,
+    discountPercent: 23,
+    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+  },
+  {
+    title: "Orang National Park 4x4 Gypsy Safari (Mini Kaziranga)",
+    slug: "orang-national-park-jeep-safari",
+    state: "ASSAM",
+    park: "Orang National Park",
+    type: "Jeep",
+    startTime: "07:00 AM",
+    duration: "3H",
+    originalPrice: 2800,
+    price: 2400,
+    discountPercent: 14,
+    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+  },
+  {
+    title: "Nameri River Rafting & Armed Walking Forest Safari",
+    slug: "nameri-national-park-river-rafting-walking-safari",
+    state: "ASSAM",
+    park: "Nameri National Park",
+    type: "River/Walking",
+    startTime: "06:30 AM",
+    duration: "4H",
+    originalPrice: 3200,
+    price: 2800,
+    discountPercent: 12,
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+  },
 ];
 
 export default function SafariBookingSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === "left" ? -340 : 340;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="bg-gray-50/70 py-20 border-y border-gray-100">
+    <section className="bg-gray-50/70 py-16 border-y border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        {/* Section Header with Navigation Arrows */}
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
               <Compass className="w-3.5 h-3.5" /> Wildlife &amp; Forest Reserves
@@ -87,34 +136,58 @@ export default function SafariBookingSection() {
               Safari Booking
             </h2>
             <p className="text-gray-600 mt-1 text-sm sm:text-base">
-              Authorized Elephant &amp; Open 4x4 Gypsy Safaris with Department-certified trackers.
+              Authorized Elephant &amp; Open 4x4 Gypsy Safaris with Department-certified trackers. Swipe horizontally to view all.
             </p>
           </div>
 
-          <Link
-            href="/safari"
-            className="inline-flex items-center gap-2 text-emerald-600 hover:text-emerald-700 font-bold text-sm shrink-0"
-          >
-            Explore All 8 Wildlife Reserves <ArrowRight className="w-4 h-4" />
-          </Link>
+          <div className="flex items-center gap-3 shrink-0">
+            {/* Scroll Navigation Buttons */}
+            <div className="hidden sm:flex items-center gap-2">
+              <button
+                onClick={() => scroll("left")}
+                aria-label="Scroll left"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-300 flex items-center justify-center shadow-sm transition-all"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                aria-label="Scroll right"
+                className="w-10 h-10 rounded-full bg-white border border-gray-200 text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-300 flex items-center justify-center shadow-sm transition-all"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            <Link
+              href="/safari"
+              className="inline-flex items-center gap-1.5 text-emerald-600 hover:text-emerald-700 font-bold text-sm bg-emerald-50 px-4 py-2 rounded-xl border border-emerald-100"
+            >
+              All Reserves <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
-        {/* 4 Cards Grid - Styled like Competitor's Screenshot but much higher fidelity */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Horizontally Scrollable Cards Container */}
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scroll-smooth no-scrollbar"
+          style={{ scrollbarWidth: "thin" }}
+        >
           {featuredSafaris.map((item) => (
             <Link
               key={item.slug}
               href={`/safari/${item.slug}`}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group hover:-translate-y-1"
+              className="w-[280px] sm:w-[320px] shrink-0 snap-start bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group hover:-translate-y-1"
             >
               <div>
                 {/* Image Box */}
-                <div className="relative h-52 w-full overflow-hidden">
+                <div className="relative h-48 w-full overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                     style={{ backgroundImage: `url('${item.image}')` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" />
 
                   {/* Wishlist Heart Icon */}
                   <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/30 backdrop-blur-md flex items-center justify-center text-white/90 hover:text-rose-400 transition-colors">
@@ -124,7 +197,7 @@ export default function SafariBookingSection() {
                   {/* Safari Type Pill */}
                   <div className="absolute top-3 left-3">
                     <span className="px-2.5 py-1 bg-emerald-600 text-white text-[11px] font-bold rounded-md shadow-sm">
-                      {item.type === "Elephant" ? "🐘 Elephant Ride" : "🚙 4x4 Gypsy"}
+                      {item.type === "Elephant" ? "🐘 Elephant Ride" : item.type === "River/Walking" ? "🛶 River & Walk" : "🚙 4x4 Gypsy"}
                     </span>
                   </div>
 
@@ -178,7 +251,7 @@ export default function SafariBookingSection() {
         </div>
 
         {/* Pobitora Guwahati Callout Banner */}
-        <div className="mt-8 bg-emerald-900 text-white rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-6 bg-emerald-900 text-white rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-xl bg-emerald-800 flex items-center justify-center text-2xl shrink-0">
               🦏
@@ -186,7 +259,7 @@ export default function SafariBookingSection() {
             <div>
               <h4 className="font-bold text-base sm:text-lg">Looking for a Safari Near Guwahati?</h4>
               <p className="text-emerald-200 text-xs sm:text-sm">
-                <strong>Pobitora Wildlife Sanctuary</strong> has the world&apos;s highest rhino density, just 48 km (~1.5 hrs) from Guwahati with dawn elephant rides at ₹1,000!
+                <strong>Pobitora Wildlife Sanctuary</strong> has the world&apos;s highest rhino density, just 48 km (~1.5 hrs) from Gauhati University with dawn elephant rides at ₹1,000!
               </p>
             </div>
           </div>
