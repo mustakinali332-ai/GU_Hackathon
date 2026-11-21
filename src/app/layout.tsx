@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-gray-50 antialiased">
         <Navbar />
-        <main className="pt-16">{children}</main>
+        <main className="pt-16 md:pt-24">{children}</main>
         <FloatingHelp />
         <Footer />
       </body>

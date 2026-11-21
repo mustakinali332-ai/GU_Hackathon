@@ -20,7 +20,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Spring Agricultural Harvest Dance & 500-Year Sacred Masks",
     description: "Assam's cultural soul beats to the rhythm of the Pepa (buffalo horn flute) and Dhol during Rongali Bihu. At Majuli's ancient Vaishnavite Satras, artisans handcraft sacred mythological masks from bamboo, cow dung, and river clay for celestial Bhaona theater.",
     highlights: ["Muga Silk Mekhela Chadors", "Pepa Buffalo Horn Music", "Majuli Bamboo Mask Art", "Sattriya Classical Dance"],
-    image: "https://images.unsplash.com/photo-1533669955142-6a73332af4db?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1533669955142-6a73332af4db?w=800&q=80", // Vibrant folk dancer & cultural costume
   },
   {
     id: "c-meghalaya",
@@ -31,7 +31,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "The Dance of Peaceful Hearts & Bio-Engineered Living Bridges",
     description: "Meghalaya follows one of the world's last surviving matrilineal societies where lineage passes through women. During Shad Suk Mynsiem, maidens in solid gold crowns (Pansngiat) and silver quivers dance to Tangmuri folk flutes thanking nature.",
     highlights: ["Matrilineal Kinship Heritage", "Gold Crown (Pansngiat)", "Living Root Bio-Architecture", "Whistling Village of Kongthong"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80", // Traditional ethnic jewelry & regalia portrait
   },
   {
     id: "c-nagaland",
@@ -42,7 +42,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Festival of Festivals Celebrating Indigenous Warrior Heritage",
     description: "Every December, the Kisama Heritage Village near Kohima roars with the warrior chants, indigenous archery, and log drums of all 17 Naga tribes. Each tribe constructs their traditional wooden youth dormitory (Morung) with carved hornbills and mithun horns.",
     highlights: ["17 Naga Tribal Morungs", "Hornbill Feather Regalia", "Traditional Log Drumming", "Ancient Warrior Chants"],
-    image: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80", // Indigenous tribal warrior representation
   },
   {
     id: "c-arunachal",
@@ -53,7 +53,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Sacred Cham Mask Dances at 400-Year-Old Himalayan Monasteries",
     description: "In the shadow of snow-clad Himalayan passes, Buddhist lamas at Tawang Monastery don vibrant yak and snow lion masks, twirling to monastic horns and cymbals during Torgya to banish malevolent spirits and usher in peace for humanity.",
     highlights: ["400-Year Tawang Monastery", "Sacred Cham Mask Rituals", "Apatani Sustainable Agriculture", "Monpa Handmade Woodcraft"],
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80", // Sacred Himalayan Buddhist mountain monastery
   },
   {
     id: "c-manipur",
@@ -64,7 +64,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Ethereal Cylindrical Potloi Dance & Modern Polo's Birthplace",
     description: "Manipuri Raas Leela is a celestial classical dance where gopis glide gracefully in ornate tubular embroidered skirts (Potloi). Manipur is also the ancient birthplace of modern polo (Sagol Kangjei) and home to Asia's 500-year-old all-women market (Ima Keithel).",
     highlights: ["Embroidered Potloi Costumes", "Sagol Kangjei (Original Polo)", "500-Yr All-Women Ima Keithel", "Thang-Ta Martial Arts"],
-    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&q=80", // Ornate traditional Indian classical performance art
   },
   {
     id: "c-sikkim",
@@ -75,7 +75,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Sikkimese Buddhist Harvest & Sacred Black Hat Warrior Chams",
     description: "Losoong marks the Sikkimese New Year across the misty monasteries of Rumtek, Pemayangtse, and Enchey. Monks perform the mystical Black Hat dance alongside vibrant theatrical pantomimes of Padmasambhava subduing negative worldly forces.",
     highlights: ["Tibetan Buddhist Thangkas", "Snow Lion & Black Hat Chams", "Ancient Chogyal Royal Heritage", "Rumtek Monastery Rituals"],
-    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80", // Mystical prayer flags & monastic mountain heritage
   },
   {
     id: "c-mizoram",
@@ -86,7 +86,7 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Acrobatic Bamboo Rhythm Celebrating Harvest & Spring Rebirth",
     description: "Cheraw is the most graceful and iconic folk dance of Mizoram. Dancers in vibrant Puan shawls step with astonishing agility in and out of rhythmic clapping bamboo staves, accompanied by tribal gongs to celebrate the arrival of spring.",
     highlights: ["Precision Bamboo Clapping", "Traditional Puan Shawls", "Khuang Folk Drumming", "Chapchar Kut Spring Carnival"],
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80", // Rolling bamboo hill settlements of Mizoram
   },
   {
     id: "c-tripura",
@@ -97,6 +97,6 @@ export const cultureHighlights: CultureItem[] = [
     tagline: "Royal 14-Deity Cleansing Rituals & Tripuri Bamboo Arts",
     description: "Kharchi Puja is celebrated at the ancient Fourteen Gods Temple in Old Agartala, cleansing the Mother Earth with chants and royal rites. During Garia Puja, indigenous Tripuri and Reang tribes dance carrying sacred decorated green bamboo poles.",
     highlights: ["14 Royal Deities of Tripura", "Sacred Garia Bamboo Dance", "Ujjayanta Royal Palace Legacy", "Indigenous Cane & Bamboo Weaving"],
-    image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80", // Royal palace heritage of Tripura
   },
 ];
