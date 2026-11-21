@@ -3,6 +3,7 @@ import StateCard from "@/components/StateCard";
 import { states } from "@/data/states";
 import { attractions } from "@/data/attractions";
 import AttractionCard from "@/components/AttractionCard";
+import SafariBookingSection from "@/components/SafariBookingSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
@@ -46,6 +47,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Featured Safari Booking Section (Elephant & Gypsy) */}
+      <SafariBookingSection />
 
       {/* Permits & ILP Callout Section */}
       <section className="bg-emerald-900 text-white py-16">

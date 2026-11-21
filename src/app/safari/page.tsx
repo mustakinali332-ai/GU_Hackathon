@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { safariPackages, SafariPackage } from "@/data/safaris";
-import { Compass, MessageCircle, ShieldCheck, X, MapPin, Info } from "lucide-react";
+import { Compass, MessageCircle, ShieldCheck, X, MapPin, Info, ArrowUpRight } from "lucide-react";
 
 export default function SafariPage() {
   const [selectedType, setSelectedType] = useState<string>("All");
@@ -138,7 +139,12 @@ export default function SafariPage() {
                   <div className="flex items-center gap-1.5 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-1">
                     <MapPin className="w-3.5 h-3.5" /> {pkg.parkName} • {pkg.district}
                   </div>
-                  <h3 className="text-2xl font-bold leading-tight">{pkg.rangeName}</h3>
+                  <Link href={`/safari/${pkg.slug}`} className="hover:text-emerald-300 transition-colors">
+                    <h3 className="text-2xl font-bold leading-tight flex items-center justify-between">
+                      <span>{pkg.rangeName}</span>
+                      <ArrowUpRight className="w-5 h-5 opacity-80" />
+                    </h3>
+                  </Link>
                 </div>
               </div>
 
@@ -197,7 +203,7 @@ export default function SafariPage() {
             </div>
 
             {/* Bottom Pricing & CTA */}
-            <div className="p-6 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
+            <div className="p-6 bg-gray-50 border-t border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span className="text-xs text-gray-400 block font-medium">Official Base Rate</span>
                 <span className="text-2xl font-bold text-gray-900">
@@ -208,12 +214,20 @@ export default function SafariPage() {
                 </span>
               </div>
 
-              <button
-                onClick={() => setActiveBookingPackage(pkg)}
-                className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg flex items-center gap-2 text-sm"
-              >
-                <Compass className="w-4 h-4" /> Reserve Slot
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  href={`/safari/${pkg.slug}`}
+                  className="px-4 py-2.5 bg-white hover:bg-gray-100 text-gray-700 font-semibold rounded-xl border border-gray-200 text-xs transition-all"
+                >
+                  Details &amp; Rules
+                </Link>
+                <button
+                  onClick={() => setActiveBookingPackage(pkg)}
+                  className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg flex items-center gap-1.5 text-xs"
+                >
+                  <Compass className="w-3.5 h-3.5" /> Reserve Slot
+                </button>
+              </div>
             </div>
           </div>
         ))}
