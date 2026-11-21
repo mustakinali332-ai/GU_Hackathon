@@ -36,7 +36,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-          <p className="flex items-center justify-center gap-1">Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> for Northeast India | TravelMateNE &copy; 2026</p>
+          <p className="flex items-center justify-center gap-1.5 text-sm">Made with <Heart className="w-4 h-4 text-rose-500 fill-rose-500 inline shrink-0" /> for Northeast India | TravelMateNE &copy; 2026</p>
         </div>
       </div>
     </footer>

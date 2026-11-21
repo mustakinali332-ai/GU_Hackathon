@@ -20,14 +20,14 @@ export const states: State[] = [
     slug: "assam",
     tagline: "The Gateway to Northeast India",
     description:
-      "Assam, the land of red river and blue hills, is known for its tea gardens, silk, wildlife sanctuaries, and rich Assamese culture. Home to the mighty Brahmaputra and the one-horned rhinoceros, Assam offers a perfect blend of nature and heritage.",
-    image: "https://images.unsplash.com/photo-1578128178001-23a5a8e7b5b4?w=800&q=80",
+      "Assam, the land of red river and blue hills, is celebrated for its sprawling tea estates, rich Assamese heritage, and pristine wildlife sanctuaries. Home to the mighty Brahmaputra river and the iconic one-horned rhinoceros, Assam seamlessly blends wilderness with vibrant riverine culture.",
+    image: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80", // Lush green hills & tea gardens
     capital: "Dispur",
-    language: ["Assamese", "Bengali", "Bodo"],
+    language: ["Assamese", "Bodo", "Bengali"],
     bestTime: "October to April",
     avgBudgetPerDay: 1500,
     attractionCount: 8,
-    highlights: ["Kaziranga National Park", "Tea Gardens", "Majuli Island", "Kamakhya Temple"],
+    highlights: ["Kaziranga National Park", "Majuli River Island", "Kamakhya Temple", "Tea Garden Estates"],
   },
   {
     id: "meghalaya",
@@ -35,29 +35,29 @@ export const states: State[] = [
     slug: "meghalaya",
     tagline: "The Abode of Clouds",
     description:
-      "Meghalaya, meaning 'abode of clouds', is famous for its living root bridges, stunning waterfalls, limestone caves, and the wettest place on Earth — Mawsynram. The Khasi, Garo, and Jaintia hills offer breathtaking landscapes and unique tribal culture.",
-    image: "https://images.unsplash.com/photo-1597735881932-d9664c9bbcea?w=800&q=80",
+      "Meghalaya is world-renowned for its mystical bio-engineered Living Root Bridges, thunderous waterfalls, limestone caverns, and the cleanest villages in Asia. From the misty cliffs of Cherrapunji to the crystal-clear waters of Dawki, Meghalaya is an adventurer's dream.",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&q=80", // Misty canyon waterfall
     capital: "Shillong",
     language: ["Khasi", "Garo", "English"],
     bestTime: "September to May",
     avgBudgetPerDay: 1800,
     attractionCount: 7,
-    highlights: ["Living Root Bridges", "Dawki River", "Cherrapunji", "Shillong Peak"],
+    highlights: ["Living Root Bridges", "Dawki Clear River", "Nohkalikai Falls", "Mawlynnong Village"],
   },
   {
     id: "nagaland",
     name: "Nagaland",
     slug: "nagaland",
-    tagline: "The Land of Festivals",
+    tagline: "The Land of Festivals & Warrior Heritage",
     description:
-      "Nagaland is a vibrant state known for its colorful tribal festivals, especially the Hornbill Festival. With 16 major tribes, each with distinct traditions, Nagaland offers a unique cultural tapestry set against misty mountains and lush green valleys.",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80",
+      "Nagaland is an extraordinary cultural tapestry nestled amid rolling mountains. Home to 16 major indigenous tribes, each with distinct handlooms, folklore, and traditions, Nagaland comes alive with the world-famous Hornbill Festival, high-altitude treks, and lush terrace cultivation.",
+    image: "https://images.unsplash.com/photo-1571536802807-30451e3955d8?w=800&q=80", // Misty mountain village
     capital: "Kohima",
     language: ["English", "Nagamese"],
     bestTime: "October to May",
     avgBudgetPerDay: 2000,
     attractionCount: 5,
-    highlights: ["Hornbill Festival", "Kohima War Cemetery", "Dzukou Valley", "Mon Village"],
+    highlights: ["Hornbill Festival", "Dzükou Valley Trek", "Kohima War Memorial", "Khonoma Green Village"],
   },
   {
     id: "manipur",
@@ -65,14 +65,14 @@ export const states: State[] = [
     slug: "manipur",
     tagline: "The Jewel of India",
     description:
-      "Manipur, the 'Jewel of India', is famous for Loktak Lake — the only floating lake in the world with its unique phumdis (floating islands). Known for Manipuri dance, polo (which originated here), and stunning natural beauty.",
-    image: "https://images.unsplash.com/photo-1625048544867-4acee7898069?w=800&q=80",
+      "Manipur is crowned by the extraordinary Loktak Lake—the only floating lake on Earth featuring circular vegetative phumdis and the dancing Sangai deer. Known as the birthplace of modern polo and rich classical Manipuri dance, it offers enchanting hill ranges and serene water expanses.",
+    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80", // Serene lake landscape
     capital: "Imphal",
     language: ["Meiteilon", "English"],
     bestTime: "October to March",
     avgBudgetPerDay: 1600,
     attractionCount: 5,
-    highlights: ["Loktak Lake", "Kangla Fort", "INA Memorial", "Shirui Lily Festival"],
+    highlights: ["Loktak Floating Lake", "Keibul Lamjao Park", "Kangla Fort", "Ima Keithel Market"],
   },
   {
     id: "mizoram",
@@ -80,29 +80,29 @@ export const states: State[] = [
     slug: "mizoram",
     tagline: "The Land of the Highlanders",
     description:
-      "Mizoram, the land of rolling hills and pleasant climate, is known for its breathtaking landscapes, vibrant Mizo culture, and one of the highest literacy rates in India. The Chapchar Kut festival and bamboo dance are iconic cultural expressions.",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      "Mizoram is a serene mountain state characterized by steep rolling hills, deep emerald valleys, and pristine bamboo forests. Boasting one of India's highest literacy rates and a warm, close-knit community culture, Mizoram is the ideal destination for slow travel and peaceful trekking.",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80", // Blue mountain ridges
     capital: "Aizawl",
     language: ["Mizo", "English"],
     bestTime: "October to March",
     avgBudgetPerDay: 1700,
     attractionCount: 4,
-    highlights: ["Phawngpui Peak", "Tam Dil Lake", "Vantawng Falls", "Aizawl City"],
+    highlights: ["Phawngpui Blue Mountain", "Vantawng Falls", "Reiek Heritage Peak", "Solomon's Temple"],
   },
   {
     id: "tripura",
     name: "Tripura",
     slug: "tripura",
-    tagline: "The Land of Fourteen Gods",
+    tagline: "The Land of Royal Water Palaces & Rock Carvings",
     description:
-      "Tripura, one of the smallest states in India, packs a punch with its royal heritage, ancient temples, and the stunning Neermahal — India's only water palace. The Ujjayanta Palace and rock carvings of Unakoti are must-visit attractions.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=800&q=80",
+      "Tripura is a jewel of royal heritage and ancient art. It houses Neermahal—India's only floating water palace in eastern India, the classical Ujjayanta Palace, and the colossal, mysterious rock-cut bas-relief sculptures of Lord Shiva at Unakoti dating back over a thousand years.",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?w=800&q=80", // Historic Indian palace on water
     capital: "Agartala",
-    language: ["Bengali", "Kokborok"],
+    language: ["Bengali", "Kokborok", "English"],
     bestTime: "September to February",
     avgBudgetPerDay: 1200,
     attractionCount: 5,
-    highlights: ["Neermahal", "Ujjayanta Palace", "Unakoti", "Jampui Hills"],
+    highlights: ["Neermahal Water Palace", "Unakoti Rock Art", "Ujjayanta Palace", "Jampui Hills"],
   },
   {
     id: "arunachal-pradesh",
@@ -110,29 +110,29 @@ export const states: State[] = [
     slug: "arunachal-pradesh",
     tagline: "The Land of the Dawn-Lit Mountains",
     description:
-      "Arunachal Pradesh, the 'Land of the Rising Sun', is India's northeasternmost state. Home to the majestic Tawang Monastery (largest in India), snow-capped peaks, pristine valleys like Ziro, and over 26 indigenous tribes with rich cultural heritage.",
-    image: "https://images.unsplash.com/photo-1626714100232-dee66e3e6b74?w=800&q=80",
+      "Arunachal Pradesh is India's wild eastern frontier, where snow-draped Himalayan crests meet ancient Tibetan monasteries. From the majestic Tawang Monastery at 10,000 ft and the frozen Sela Pass to the tranquil pine valleys of Ziro, Arunachal is an awe-inspiring realm of nature and spirituality.",
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80", // Snow peaks & prayer flag mountain
     capital: "Itanagar",
-    language: ["English", "Hindi", "tribal languages"],
+    language: ["English", "Hindi"],
     bestTime: "March to October",
     avgBudgetPerDay: 2500,
     attractionCount: 6,
-    highlights: ["Tawang Monastery", "Ziro Valley", "Sela Pass", "Namdapha National Park"],
+    highlights: ["Tawang Monastery", "Sela Pass & Lake", "Ziro Valley Pine Groves", "Namdapha Tiger Reserve"],
   },
   {
     id: "sikkim",
     name: "Sikkim",
     slug: "sikkim",
-    tagline: "The Hidden Paradise of the Himalayas",
+    tagline: "The Sanctuary of the Himalayas",
     description:
-      "Sikkim, nestled in the Eastern Himalayas, is a land of breathtaking mountain landscapes, ancient monasteries, and pristine lakes. With views of Kanchenjunga, the world's third-highest peak, Sikkim offers adventure, spirituality, and natural beauty.",
-    image: "https://images.unsplash.com/photo-1626686010641-1296da2d943e?w=800&q=80",
+      "Sikkim is a magical Himalayan wonderland watched over by Mt. Kanchenjunga—the world's third-highest peak. Famous as India's first 100% organic state, Sikkim delights travelers with high-altitude sacred lakes like Gurudongmar, centuries-old Buddhist monasteries, and roaring mountain passes.",
+    image: "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80", // Himalayan mountain lake & snow peaks
     capital: "Gangtok",
     language: ["Nepali", "Sikkimese", "English"],
     bestTime: "March to June, October to December",
     avgBudgetPerDay: 2200,
     attractionCount: 6,
-    highlights: ["Gurudongmar Lake", "Nathula Pass", "Tsomgo Lake", "Rumtek Monastery"],
+    highlights: ["Gurudongmar Sacred Lake", "Nathula Border Pass", "Tsomgo Glacial Lake", "Rumtek Monastery"],
   },
 ];
 

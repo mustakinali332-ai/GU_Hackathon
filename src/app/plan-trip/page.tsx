@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { states } from "@/data/states";
-import { Sparkles, Loader2, MapPin, Calendar, IndianRupee, Heart, Users, ChevronDown, ChevronUp, Lightbulb, AlertTriangle, Backpack } from "lucide-react";
+import { Sparkles, Loader2, MapPin, Calendar, IndianRupee, Heart, Users, ChevronDown, ChevronUp, Lightbulb, AlertTriangle, Backpack, Printer, Share2 } from "lucide-react";
 
 const interestOptions = ["Nature", "Adventure", "Culture", "Food", "Photography", "Wildlife", "Spirituality", "History"];
 const styleOptions = ["Solo", "Couple", "Family", "Friends Group"];
@@ -143,10 +143,28 @@ export default function PlanTripPage() {
           <div className="bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl p-8 text-white">
             <h2 className="text-3xl font-bold mb-2">{plan.title}</h2>
             <p className="text-emerald-100 text-lg">{plan.summary}</p>
-            <div className="flex flex-wrap gap-4 mt-6">
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">📅 {days} Days</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">💰 ₹{budget.toLocaleString()}</span>
-              <span className="bg-white/20 px-3 py-1 rounded-full text-sm">👤 {travelStyle}</span>
+            <div className="flex flex-wrap items-center justify-between gap-4 mt-6 pt-4 border-t border-white/20">
+              <div className="flex flex-wrap gap-2">
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm">📅 {days} Days</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm">💰 ₹{budget.toLocaleString()}</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm">👤 {travelStyle}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => window.print()}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/20 hover:bg-white/30 text-white text-xs font-semibold backdrop-blur-sm transition-all"
+                >
+                  <Printer className="w-3.5 h-3.5" /> Print / PDF
+                </button>
+                <a
+                  href={`https://wa.me/?text=${encodeURIComponent(`Check out my custom Northeast India trip itinerary: "${plan.title}" for ${days} days! Created with TravelMateNE: https://gu-hackathon.vercel.app/plan-trip`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-green-500 hover:bg-green-600 text-white text-xs font-semibold shadow-sm transition-all"
+                >
+                  <Share2 className="w-3.5 h-3.5" /> Share
+                </a>
+              </div>
             </div>
           </div>
 
