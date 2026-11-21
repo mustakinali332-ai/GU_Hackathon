@@ -1,9 +1,10 @@
 "use client";
 import { useState } from "react";
 import { safariPackages, SafariPackage } from "@/data/safaris";
-import { Compass, Users, Clock, Calendar, MessageCircle, ShieldCheck, X } from "lucide-react";
+import { Compass, MessageCircle, ShieldCheck, X, MapPin, Info } from "lucide-react";
 
 export default function SafariPage() {
+  const [selectedType, setSelectedType] = useState<string>("All");
   const [selectedPark, setSelectedPark] = useState<string>("All");
   const [activeBookingPackage, setActiveBookingPackage] = useState<SafariPackage | null>(null);
 
@@ -13,56 +14,104 @@ export default function SafariPage() {
   const [passengerCount, setPassengerCount] = useState<number>(2);
   const [isForeigner, setIsForeigner] = useState<boolean>(false);
 
-  const parks = ["All", "Kaziranga National Park", "Manas National Park", "Namdapha National Park"];
+  const safariTypes = [
+    { id: "All", label: "All Safaris" },
+    { id: "Elephant", label: "🐘 Elephant Safaris (Dawn)" },
+    { id: "Jeep", label: "🚙 4x4 Open Gypsy" },
+    { id: "River/Walking", label: "🛶 River & Walking Safaris" },
+  ];
 
-  const filteredPackages =
-    selectedPark === "All"
-      ? safariPackages
-      : safariPackages.filter((p) => p.parkName === selectedPark);
+  const parks = [
+    "All",
+    "Pobitora Wildlife Sanctuary",
+    "Kaziranga National Park",
+    "Manas National Park",
+    "Orang National Park",
+    "Nameri National Park",
+  ];
+
+  const filteredPackages = safariPackages.filter((pkg) => {
+    const matchesType = selectedType === "All" || pkg.safariType === selectedType;
+    const matchesPark = selectedPark === "All" || pkg.parkName === selectedPark;
+    return matchesType && matchesPark;
+  });
 
   const calculateTotal = (pkg: SafariPackage) => {
-    const entryFee = isForeigner ? pkg.entryFeeForeign : pkg.entryFeeIndian;
-    const totalEntry = entryFee * passengerCount;
-    const guardFee = 500; // Mandatory forest guard fee
-    return pkg.pricePerVehicle + totalEntry + guardFee;
+    const basePrice = pkg.safariType === "Elephant" ? pkg.pricePerVehicle * passengerCount : pkg.pricePerVehicle;
+    const entryFee = (isForeigner ? pkg.entryFeeForeign : pkg.entryFeeIndian) * passengerCount;
+    return basePrice + entryFee + pkg.guardFee;
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 rounded-full text-emerald-700 text-sm font-medium mb-4">
           <Compass className="w-4 h-4" /> Official Forest Gypsy &amp; Elephant Safaris
         </div>
         <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-          Wildlife Safaris &amp; Gypsy Booking
+          Northeast Wildlife &amp; Safari Booking
         </h1>
         <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-          Reserve registered 4x4 open safari gypsies and dawn elephant rides across Kaziranga, Manas, and Namdapha. Direct authorized rates with zero agency markups.
+          Experience the wild heartlands of Assam and the Northeast. Compare official <strong>Elephant Safaris</strong> through tall grass with high-speed <strong>4x4 Open Gypsy circuits</strong> across Kaziranga, Pobitora, Manas, Orang, and Nameri.
         </p>
       </div>
 
-      {/* Filter Tabs */}
-      <div className="flex justify-center mb-10">
+      {/* Educational Callout: Elephant vs Jeep Safaris */}
+      <div className="bg-gradient-to-r from-emerald-900 to-teal-900 text-white rounded-3xl p-6 sm:p-8 mb-10 shadow-xl">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-3xl space-y-2">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-800 text-emerald-300 rounded-full text-xs font-semibold">
+              <Info className="w-3.5 h-3.5" /> Safari Intelligence
+            </span>
+            <h3 className="text-2xl font-bold">Elephant Safari vs. 4x4 Gypsy: Which to Choose?</h3>
+            <p className="text-emerald-100 text-sm leading-relaxed">
+              <strong>🐘 Elephant Safaris</strong> operate strictly at dawn (5:00 AM – 7:30 AM). They enter 10-foot tall elephant grass where vehicles cannot go, allowing you to get within 5 meters of grazing rhinos without engine noise. Highly limited slots!<br />
+              <strong>🚙 4x4 Jeep Safaris</strong> cover extensive forest circuits (up to 40 km) through grasslands, wetlands, and dense sal forests—ideal for spotting tigers, wild buffaloes, elephants, and migratory birds.
+            </p>
+          </div>
+          <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 text-center shrink-0">
+            <span className="text-emerald-300 text-xs font-semibold block uppercase">Closest to Guwahati</span>
+            <span className="text-xl font-bold block mt-0.5">Pobitora Sanctuary</span>
+            <span className="text-xs text-gray-300">Just 48 km (~1.5 hrs) • Highest Rhino Density</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Safari Type Filter Tabs */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
         <div className="flex flex-wrap gap-2">
-          {parks.map((park) => (
+          {safariTypes.map((type) => (
             <button
-              key={park}
-              onClick={() => setSelectedPark(park)}
-              className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${
-                selectedPark === park
+              key={type.id}
+              onClick={() => setSelectedType(type.id)}
+              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                selectedType === type.id
                   ? "bg-emerald-600 text-white shadow-md"
                   : "bg-white text-gray-700 hover:bg-gray-100 border border-gray-200"
               }`}
             >
-              {park}
+              {type.label}
             </button>
           ))}
         </div>
+
+        {/* Park Filter Dropdown */}
+        <select
+          value={selectedPark}
+          onChange={(e) => setSelectedPark(e.target.value)}
+          className="px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-sm"
+        >
+          {parks.map((p) => (
+            <option key={p} value={p}>
+              {p === "All" ? "All National Parks & Reserves" : p}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* Safari Packages Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+      {/* Safari Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         {filteredPackages.map((pkg) => (
           <div
             key={pkg.id}
@@ -74,9 +123,11 @@ export default function SafariPage() {
                   className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                   style={{ backgroundImage: `url('${pkg.image}')` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="absolute top-4 left-4 flex gap-2">
-                  <span className="px-3 py-1 bg-emerald-600 text-white text-xs font-semibold rounded-full shadow-sm">
+                  <span className={`px-3 py-1 text-white text-xs font-bold rounded-full shadow-sm ${
+                    pkg.safariType === "Elephant" ? "bg-amber-600" : pkg.safariType === "River/Walking" ? "bg-blue-600" : "bg-emerald-600"
+                  }`}>
                     {pkg.vehicleType}
                   </span>
                   <span className="px-3 py-1 bg-black/60 backdrop-blur-md text-white text-xs font-semibold rounded-full">
@@ -84,10 +135,10 @@ export default function SafariPage() {
                   </span>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <p className="text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-1">
-                    {pkg.parkName}
-                  </p>
-                  <h3 className="text-2xl font-bold">{pkg.rangeName}</h3>
+                  <div className="flex items-center gap-1.5 text-emerald-300 text-xs font-semibold uppercase tracking-wider mb-1">
+                    <MapPin className="w-3.5 h-3.5" /> {pkg.parkName} • {pkg.district}
+                  </div>
+                  <h3 className="text-2xl font-bold leading-tight">{pkg.rangeName}</h3>
                 </div>
               </div>
 
@@ -96,23 +147,40 @@ export default function SafariPage() {
                   {pkg.description}
                 </p>
 
-                {/* Badges */}
-                <div className="flex flex-wrap gap-3 text-xs text-gray-500 pt-2 border-t border-gray-100">
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-emerald-600" /> {pkg.duration}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Users className="w-3.5 h-3.5 text-emerald-600" /> {pkg.capacity}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-emerald-600" /> {pkg.bestSeason}
-                  </span>
+                {/* Logistics Badges */}
+                <div className="grid grid-cols-3 gap-2 py-3 border-y border-gray-100 text-center text-xs">
+                  <div>
+                    <span className="text-gray-400 block text-[11px]">Duration</span>
+                    <span className="font-bold text-gray-900 mt-0.5 block">{pkg.duration}</span>
+                  </div>
+                  <div className="border-x border-gray-100">
+                    <span className="text-gray-400 block text-[11px]">Capacity</span>
+                    <span className="font-bold text-gray-900 mt-0.5 block">{pkg.capacity}</span>
+                  </div>
+                  <div>
+                    <span className="text-gray-400 block text-[11px]">From Guwahati</span>
+                    <span className="font-bold text-emerald-700 mt-0.5 block">{pkg.distanceFromGuwahati}</span>
+                  </div>
                 </div>
 
-                {/* Wildlife tags */}
+                {/* Timings */}
+                <div>
+                  <span className="text-xs font-bold text-gray-900 block mb-1.5 uppercase tracking-wider">
+                    Available Batches:
+                  </span>
+                  <div className="flex flex-wrap gap-2 text-xs text-gray-600">
+                    {pkg.timings.map((t, idx) => (
+                      <span key={idx} className="px-2.5 py-1 bg-gray-100 rounded-lg font-medium">
+                        🕒 {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Target Wildlife */}
                 <div>
                   <p className="text-xs font-bold text-gray-900 mb-2 uppercase tracking-wider">
-                    Target Wildlife:
+                    Key Wildlife:
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {pkg.wildlifeHighlights.map((animal) => (
@@ -128,15 +196,15 @@ export default function SafariPage() {
               </div>
             </div>
 
-            {/* Bottom pricing & CTA */}
+            {/* Bottom Pricing & CTA */}
             <div className="p-6 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
               <div>
-                <span className="text-xs text-gray-400 block font-medium">Official Rate</span>
+                <span className="text-xs text-gray-400 block font-medium">Official Base Rate</span>
                 <span className="text-2xl font-bold text-gray-900">
                   ₹{pkg.pricePerVehicle.toLocaleString()}
                 </span>
                 <span className="text-xs text-gray-500">
-                  {pkg.vehicleType === "Elephant Safari" ? "/rider" : "/gypsy (up to 6)"}
+                  {pkg.safariType === "Elephant" ? "/rider" : "/vehicle (up to 6)"}
                 </span>
               </div>
 
@@ -144,14 +212,14 @@ export default function SafariPage() {
                 onClick={() => setActiveBookingPackage(pkg)}
                 className="px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md hover:shadow-lg flex items-center gap-2 text-sm"
               >
-                <Compass className="w-4 h-4" /> Book Safari Slot
+                <Compass className="w-4 h-4" /> Reserve Slot
               </button>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Booking Modal */}
+      {/* Booking Drawer Modal */}
       {activeBookingPackage && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
@@ -164,12 +232,14 @@ export default function SafariPage() {
 
             <div className="mb-6">
               <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">
-                Instant Safari Reservation
+                Instant Forest Desk Reservation
               </span>
               <h3 className="text-2xl font-bold text-gray-900 mt-1">
                 {activeBookingPackage.rangeName}
               </h3>
-              <p className="text-xs text-gray-500">{activeBookingPackage.parkName}</p>
+              <p className="text-xs text-gray-500">
+                {activeBookingPackage.parkName} • {activeBookingPackage.vehicleType}
+              </p>
             </div>
 
             <div className="space-y-4 mb-6">
@@ -195,18 +265,18 @@ export default function SafariPage() {
                     onChange={(e) => setSelectedSlot(e.target.value)}
                     className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none bg-white"
                   >
-                    <option value="Morning">Morning (6:30 AM)</option>
-                    <option value="Afternoon">Afternoon (1:30 PM)</option>
+                    <option value="Dawn / Morning">Dawn / Morning Batch</option>
+                    <option value="Afternoon">Afternoon Batch</option>
                   </select>
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-gray-700 mb-1">
-                    Passengers
+                    Passengers / Riders
                   </label>
                   <input
                     type="number"
                     min={1}
-                    max={6}
+                    max={activeBookingPackage.safariType === "Elephant" ? 4 : 6}
                     value={passengerCount}
                     onChange={(e) => setPassengerCount(Number(e.target.value))}
                     className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-emerald-500 outline-none"
@@ -223,7 +293,7 @@ export default function SafariPage() {
                     className="w-4 h-4 rounded text-emerald-600 accent-emerald-600"
                   />
                   <span className="text-xs font-medium text-gray-700">
-                    Traveling with Foreign Passport (Applies ₹650/pax Forest Fee)
+                    Traveling with Foreign Passport (Forest Entry: ₹{activeBookingPackage.entryFeeForeign}/pax)
                   </span>
                 </label>
               </div>
@@ -231,8 +301,12 @@ export default function SafariPage() {
               {/* Price Breakdown Calculation */}
               <div className="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-100 space-y-1.5 text-xs text-gray-700">
                 <div className="flex justify-between">
-                  <span>Vehicle Hire ({activeBookingPackage.vehicleType})</span>
-                  <span className="font-semibold">₹{activeBookingPackage.pricePerVehicle}</span>
+                  <span>
+                    {activeBookingPackage.safariType === "Elephant" ? `Elephant Ride (${passengerCount} seats)` : `4x4 Gypsy Hire`}
+                  </span>
+                  <span className="font-semibold">
+                    ₹{activeBookingPackage.safariType === "Elephant" ? activeBookingPackage.pricePerVehicle * passengerCount : activeBookingPackage.pricePerVehicle}
+                  </span>
                 </div>
                 <div className="flex justify-between">
                   <span>Forest Entry Permit ({passengerCount} pax)</span>
@@ -242,11 +316,13 @@ export default function SafariPage() {
                 </div>
                 <div className="flex justify-between">
                   <span>Mandatory Forest Armed Guard Fee</span>
-                  <span className="font-semibold">₹500</span>
+                  <span className="font-semibold">₹{activeBookingPackage.guardFee}</span>
                 </div>
                 <div className="border-t border-emerald-200 pt-2 flex justify-between text-sm font-bold text-emerald-950">
-                  <span>Estimated Total</span>
-                  <span className="text-emerald-700">₹{calculateTotal(activeBookingPackage).toLocaleString()}</span>
+                  <span>Total Payable at Ranger Desk</span>
+                  <span className="text-emerald-700">
+                    ₹{calculateTotal(activeBookingPackage).toLocaleString()}
+                  </span>
                 </div>
               </div>
             </div>
@@ -254,7 +330,7 @@ export default function SafariPage() {
             <div className="space-y-3">
               <a
                 href={`https://wa.me/919876543210?text=${encodeURIComponent(
-                  `Hi Ranger Desk! I would like to reserve a ${activeBookingPackage.vehicleType} at ${activeBookingPackage.parkName} (${activeBookingPackage.rangeName}) on ${safariDate} for ${passengerCount} passengers (${selectedSlot} slot). Estimated total: ₹${calculateTotal(activeBookingPackage)}.`
+                  `Hi Ranger Desk! I would like to reserve a ${activeBookingPackage.vehicleType} at ${activeBookingPackage.parkName} (${activeBookingPackage.rangeName}) on ${safariDate} for ${passengerCount} passengers (${selectedSlot} batch). Estimated total: ₹${calculateTotal(activeBookingPackage).toLocaleString()}.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -263,7 +339,7 @@ export default function SafariPage() {
                 <MessageCircle className="w-4 h-4" /> Send Request to Forest Desk (WhatsApp)
               </a>
               <p className="text-[11px] text-gray-400 text-center flex items-center justify-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> 100% authorized government rates • Zero booking fee
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Authorized government rates • Direct Eco-Society coordination
               </p>
             </div>
           </div>
