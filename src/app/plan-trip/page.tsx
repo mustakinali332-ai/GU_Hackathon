@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { states } from "@/data/states";
-import { Sparkles, Loader2, MapPin, Calendar, IndianRupee, Heart, Users, Download, ChevronDown, ChevronUp, Lightbulb, AlertTriangle, Backpack } from "lucide-react";
+import { Sparkles, Loader2, MapPin, Calendar, IndianRupee, Heart, Users, ChevronDown, ChevronUp, Lightbulb, AlertTriangle, Backpack } from "lucide-react";
 
 const interestOptions = ["Nature", "Adventure", "Culture", "Food", "Photography", "Wildlife", "Spirituality", "History"];
 const styleOptions = ["Solo", "Couple", "Family", "Friends Group"];

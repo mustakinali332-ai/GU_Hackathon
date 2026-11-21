@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { states } from "@/data/states";
-import { IndianRupee, Calculator, TrendingDown } from "lucide-react";
+import { Calculator, TrendingDown } from "lucide-react";
 
 const stayTypes = [
   { label: "Budget (Hostel/Homestay)", multiplier: 0.6 },

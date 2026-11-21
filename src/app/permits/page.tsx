@@ -1,13 +1,12 @@
 "use client";
 import { useState } from "react";
 import { permitsData } from "@/data/permits";
-import { ShieldAlert, ShieldCheck, ExternalLink, FileText, Clock, IndianRupee, MapPin, Lightbulb, CheckCircle2, Search, HelpCircle } from "lucide-react";
+import { ShieldAlert, ShieldCheck, ExternalLink, FileText, MapPin, Lightbulb, CheckCircle2, Search, HelpCircle } from "lucide-react";
 
 export default function PermitsPage() {
   const [nationality, setNationality] = useState<"indian" | "foreign">("indian");
   const [filterStatus, setFilterStatus] = useState<"all" | "required" | "free">("all");
   const [search, setSearch] = useState("");
-  const [selectedState, setSelectedState] = useState<string | null>(null);
 
   const filteredPermits = permitsData.filter((p) => {
     const info = nationality === "indian" ? p.indianCitizens : p.foreignNationals;
@@ -128,7 +127,6 @@ export default function PermitsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         {filteredPermits.map((item) => {
           const info = nationality === "indian" ? item.indianCitizens : item.foreignNationals;
-          const isSelected = selectedState === item.stateId;
 
           return (
             <div
