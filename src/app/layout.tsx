@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingHelp from "@/components/FloatingHelp";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "TravelMateNE — Discover Northeast India",
@@ -17,6 +19,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="pt-16 md:pt-24">{children}</main>
         <FloatingHelp />
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
